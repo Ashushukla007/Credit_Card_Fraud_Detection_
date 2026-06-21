@@ -1,0 +1,4 @@
+app/data/creditcard.csv
+projectenv/
+__pycache__/
+*.pyc
