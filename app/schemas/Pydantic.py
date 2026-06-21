@@ -1,0 +1,8 @@
+from pydantic import BaseModel
+
+class data(BaseModel):
+    rownumber:int
+    
+    
+
+    
