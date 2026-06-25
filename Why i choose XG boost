@@ -1,0 +1,25 @@
+## Model Selection
+
+This project explores multiple ensemble boosting algorithms for credit card fraud detection on a highly imbalanced dataset. The following models were trained and evaluated:
+
+* AdaBoost Classifier
+* Gradient Boosting Classifier
+* XGBoost Classifier
+
+Since the dataset is highly imbalanced, model evaluation focused on **Precision, Recall, F1-Score, ROC-AUC, and Precision-Recall (PR) metrics** instead of overall accuracy.
+
+After comparing the performance of all three models, **XGBoost** achieved the best overall results by providing the strongest balance between precision and recall while maintaining superior classification performance. Based on these evaluation metrics, XGBoost was selected as the final model for deployment.
+
+## Dataset Information
+
+The dataset used in this project is highly imbalanced, containing **284,807 transactions**, of which only **492 are fraudulent (approximately 0.17%)**. Additionally, to preserve customer privacy, the original transaction features were anonymized by applying **Principal Component Analysis (PCA)**. Consequently:
+
+* Features **V1–V28** are PCA-transformed components.
+* **Time** and **Amount** are the only original features available.
+* The deployed model accepts these engineered PCA features as input for prediction.
+
+## Exploratory Data Analysis
+
+A detailed Exploratory Data Analysis (EDA), preprocessing workflow, visualizations, feature analysis, and model experimentation can be found in the accompanying Kaggle notebook.
+
+**EDA Notebook:** [Credit Card Fraud Detection – Kaggle Notebook](https://www.kaggle.com/code/ashuthetics007/credit-card-fraud-detection?utm_source=chatgpt.com)
